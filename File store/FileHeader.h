@@ -24,6 +24,9 @@
 //   Serial.println(data);
   
 // }
+//  realize that we need to intialize littleFs first in the  void setup(){}
+// also i am an idiot for writing two functions
+//not-programmer
 void ReadFile(const char* filename) {
   File file = LittleFS.open(filename, "r");
   if (!file) {
