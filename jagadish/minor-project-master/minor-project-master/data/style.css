@@ -1,0 +1,7 @@
+#map { height: 500px; }
+
+#sucess-notification{
+    display: none;
+    background-color: red;
+    color: black;
+}
