@@ -53,7 +53,9 @@ void readNFC() {
     HTTPClient http;
 
     // Make a POST request to the server
-    String requestUrl = String(serverUrl) + String(endpoint);
+    // String requestUrl = String(serverUrl) + String(endpoint);
+    String requestUrl = String("https://dummy.restapiexample.com/api/v1") + String("/create");
+
     String requestBody = String("{\"tag_id\":\"") + String(tagId) + String("\"}");
     http.begin(client, requestUrl);
     http.addHeader("Content-Type", "application/json");
