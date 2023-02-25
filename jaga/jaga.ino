@@ -61,14 +61,13 @@ void setup()   {
 Serial.begin(115200);
 Serial.println("System initialized");
 
-// wifi portion 
- connectToWiFi("123","1234567890");
+
 display.begin(i2c_Address, true);
 delay(250);
 display.clearDisplay();
 display.display();
 nfc.begin();  
-playBuzzer(14,2,1000)  ;
+
 }
 
 
@@ -112,11 +111,7 @@ void readNFC()
   display.setTextSize(1);
   display.print(tagId);
   display.display();
-  //play sound
-// sendPostRequest("99,99");
-playBuzzer(14,1,1000);
-
-  // delay(1000);
+ 
   display.clearDisplay();
   
 
@@ -128,23 +123,6 @@ playBuzzer(14,1,1000);
 } 
 
   
-
-
-
-// sound //////////////////////////////////////////////////////////////////////
-// void playBuzzer(int pin, int times, int interval)
-// {
-//     for (int i = 0; i < times; i++)
-//     {
-//         /* code */
-//         digitalWrite(pin, HIGH);
-//         delay(interval);
-//         digitalWrite(pin, LOW);
-//         delay(interval);
-//         Serial.println("sound completed");
-//     }
-// }
-
 
 
 
